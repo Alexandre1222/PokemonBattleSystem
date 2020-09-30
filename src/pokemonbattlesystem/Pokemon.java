@@ -9,7 +9,7 @@ package pokemonbattlesystem;
  *
  * @author 55859
  */
-public class Pokemon{
+    public class Pokemon{
 
      int HP;
      int At;
@@ -59,9 +59,208 @@ public class Pokemon{
              System.out.println("Você selecionou um golpe fisico");
          damage = p.At * Double.parseDouble(moves[m][1])/q.Df;
          }
+         Double rawDamage = damage;
+         String TipoM = moves[m][3];
+         String TipoP1 = p.Tipo1;
+         String TipoP2 = p.Tipo2;
+         String TipoQ1 = q.Tipo1;
+         String TipoQ2 = q.Tipo2;
+                  if(TipoQ1.equals("Fire")){
+             if(TipoM.equals("Fire")){
+             damage /= 2;
+             }else if(TipoM.equals("Water")){
+             damage *= 2;
+             }else if(TipoM.equals("Grass")){
+                 damage /= 2;
+             }else if(TipoM.equals("Ground")){
+             damage *= 2;
+             }else if(TipoM.equals("Rock")){
+                 damage *= 2;
+              }else if(TipoM.equals("Ice")){
+              damage /= 2;
+              }
+         
+         }else if(TipoQ1.equals("Water")){
+             if(TipoM.equals("Fire")){
+             damage /=2;
+             }else if(TipoM.equals("Water")){
+             damage /=2;
+             }else if(TipoM.equals("Grass")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage *=2;
+             }else if(TipoM.equals("Ice")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Grass")){
+             if(TipoM.equals("Fire")){
+             damage *=2;
+             }else if(TipoM.equals("Water")){
+             damage /=2;
+             }else if(TipoM.equals("Grass")){
+             damage /=2;
+             }else if(TipoM.equals("Ground")){
+             damage /=2;
+             }else if(TipoM.equals("Rock")){
+             damage *=2;
+             }else if(TipoM.equals("Ice")){
+             damage *=2;
+             }else if(TipoM.equals("Flying")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Psychic")){
+             if(TipoM.equals("Psychic")){
+             damage /=2;
+             }else if(TipoM.equals("Dark")){
+             damage *=2;
+             }else if(TipoM.equals("Fighting")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Flying")){
+            if(TipoM.equals("Ice")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage *=2;
+             }else if(TipoM.equals("Fighting")){
+             damage /=2;
+             }else if(TipoM.equals("Rock")){
+             damage *=2;
+             }else if(TipoM.equals("Ground")){
+             damage =0;
+             }else if(TipoM.equals("Grass")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Ground")){
+             if(TipoM.equals("Ice")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage =0;
+             }else if(TipoM.equals("Water")){
+             damage *=2;
+             }else if(TipoM.equals("Grass")){
+             damage *=2;
+             }
+         }else if(TipoQ1.equals("Poison")){
+             if(TipoM.equals("Ground")){
+             damage *=2;
+             }else if(TipoM.equals("Psychic")){
+             damage *=2;
+             }else if(TipoM.equals("Grass")){
+             damage /=2;
+             }else if(TipoM.equals("Poison")){
+             damage /=2;
+             }else if(TipoM.equals("Fighting")){
+             damage /=2;
+             }
+         }if(TipoQ2.equals("null")){
+         q.HP -= damage;
+         }else{
+         
+             
+          if(TipoQ1.equals("Fire")){
+             if(TipoM.equals("Fire")){
+             damage /= 2;
+             }else if(TipoM.equals("Water")){
+             damage *= 2;
+             }else if(TipoM.equals("Grass")){
+                 damage /= 2;
+             }else if(TipoM.equals("Ground")){
+             damage *= 2;
+             }else if(TipoM.equals("Rock")){
+                 damage *= 2;
+              }else if(TipoM.equals("Ice")){
+              damage /= 2;
+              }
+         
+         }else if(TipoQ1.equals("Water")){
+             if(TipoM.equals("Fire")){
+             damage /=2;
+             }else if(TipoM.equals("Water")){
+             damage /=2;
+             }else if(TipoM.equals("Grass")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage *=2;
+             }else if(TipoM.equals("Ice")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Grass")){
+             if(TipoM.equals("Fire")){
+             damage *=2;
+             }else if(TipoM.equals("Water")){
+             damage /=2;
+             }else if(TipoM.equals("Grass")){
+             damage /=2;
+             }else if(TipoM.equals("Ground")){
+             damage /=2;
+             }else if(TipoM.equals("Rock")){
+             damage *=2;
+             }else if(TipoM.equals("Ice")){
+             damage *=2;
+             }else if(TipoM.equals("Flying")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Psychic")){
+             if(TipoM.equals("Psychic")){
+             damage /=2;
+             }else if(TipoM.equals("Dark")){
+             damage *=2;
+             }else if(TipoM.equals("Fighting")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Flying")){
+            if(TipoM.equals("Ice")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage *=2;
+             }else if(TipoM.equals("Fighting")){
+             damage /=2;
+             }else if(TipoM.equals("Rock")){
+             damage *=2;
+             }else if(TipoM.equals("Ground")){
+             damage =0;
+             }else if(TipoM.equals("Grass")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Ground")){
+             if(TipoM.equals("Ice")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage =0;
+             }else if(TipoM.equals("Water")){
+             damage *=2;
+             }else if(TipoM.equals("Grass")){
+             damage *=2;
+             }
+         }else if(TipoQ1.equals("Poison")){
+             if(TipoM.equals("Ground")){
+             damage *=2;
+             }else if(TipoM.equals("Psychic")){
+             damage *=2;
+             }else if(TipoM.equals("Grass")){
+             damage /=2;
+             }else if(TipoM.equals("Poison")){
+             damage /=2;
+             }else if(TipoM.equals("Fighting")){
+             damage /=2;
+             }            
+               
+         }
+         }
+         
         q.HP -= damage;
+        if (damage == 0){
+            System.out.println(moves[m][0] + "não teve efeito algum");
+        }else if(damage > rawDamage){
+            System.out.println(moves[m][0] + "o golpe foi super efetivo");
+        }else if(damage < rawDamage){
+            System.out.println(moves[m][0] + "o golpe não foi muito efetivo");
+        }
          System.out.println("O pokemon inimigo levou: " + damage + " de dano");
-
      }
      void BotAtack(Pokemon p, int m, Pokemon q){
      double damage = 0.0;
@@ -80,7 +279,207 @@ public class Pokemon{
              
          damage = p.At * Double.parseDouble(moves[m][1])/p.Df;
          }
-        q.HP -= damage;
+         Double rawDamage = damage;
+         String TipoM = moves[m][3];
+         String TipoP1 = p.Tipo1;
+         String TipoP2 = p.Tipo2;
+         String TipoQ1 = q.Tipo1;
+         String TipoQ2 = q.Tipo2;
+         if(TipoQ1.equals("Fire")){
+             if(TipoM.equals("Fire")){
+             damage /= 2;
+             }else if(TipoM.equals("Water")){
+             damage *= 2;
+             }else if(TipoM.equals("Grass")){
+                 damage /= 2;
+             }else if(TipoM.equals("Ground")){
+             damage *= 2;
+             }else if(TipoM.equals("Rock")){
+                 damage *= 2;
+              }else if(TipoM.equals("Ice")){
+              damage /= 2;
+              }
+         
+         }else if(TipoQ1.equals("Water")){
+             if(TipoM.equals("Fire")){
+             damage /=2;
+             }else if(TipoM.equals("Water")){
+             damage /=2;
+             }else if(TipoM.equals("Grass")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage *=2;
+             }else if(TipoM.equals("Ice")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Grass")){
+             if(TipoM.equals("Fire")){
+             damage *=2;
+             }else if(TipoM.equals("Water")){
+             damage /=2;
+             }else if(TipoM.equals("Grass")){
+             damage /=2;
+             }else if(TipoM.equals("Ground")){
+             damage /=2;
+             }else if(TipoM.equals("Rock")){
+             damage *=2;
+             }else if(TipoM.equals("Ice")){
+             damage *=2;
+             }else if(TipoM.equals("Flying")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Psychic")){
+             if(TipoM.equals("Psychic")){
+             damage /=2;
+             }else if(TipoM.equals("Dark")){
+             damage *=2;
+             }else if(TipoM.equals("Fighting")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Flying")){
+            if(TipoM.equals("Ice")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage *=2;
+             }else if(TipoM.equals("Fighting")){
+             damage /=2;
+             }else if(TipoM.equals("Rock")){
+             damage *=2;
+             }else if(TipoM.equals("Ground")){
+             damage =0;
+             }else if(TipoM.equals("Grass")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Ground")){
+             if(TipoM.equals("Ice")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage =0;
+             }else if(TipoM.equals("Water")){
+             damage *=2;
+             }else if(TipoM.equals("Grass")){
+             damage *=2;
+             }
+         }else if(TipoQ1.equals("Poison")){
+             if(TipoM.equals("Ground")){
+             damage *=2;
+             }else if(TipoM.equals("Psychic")){
+             damage *=2;
+             }else if(TipoM.equals("Grass")){
+             damage /=2;
+             }else if(TipoM.equals("Poison")){
+             damage /=2;
+             }else if(TipoM.equals("Fighting")){
+             damage /=2;
+             }
+         }if(TipoQ2.equals("null")){
+         q.HP -= damage;
+         }else{
+         
+             
+          if(TipoQ1.equals("Fire")){
+             if(TipoM.equals("Fire")){
+             damage /= 2;
+             }else if(TipoM.equals("Water")){
+             damage *= 2;
+             }else if(TipoM.equals("Grass")){
+                 damage /= 2;
+             }else if(TipoM.equals("Ground")){
+             damage *= 2;
+             }else if(TipoM.equals("Rock")){
+                 damage *= 2;
+              }else if(TipoM.equals("Ice")){
+              damage /= 2;
+              }
+         
+         }else if(TipoQ1.equals("Water")){
+             if(TipoM.equals("Fire")){
+             damage /=2;
+             }else if(TipoM.equals("Water")){
+             damage /=2;
+             }else if(TipoM.equals("Grass")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage *=2;
+             }else if(TipoM.equals("Ice")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Grass")){
+             if(TipoM.equals("Fire")){
+             damage *=2;
+             }else if(TipoM.equals("Water")){
+             damage /=2;
+             }else if(TipoM.equals("Grass")){
+             damage /=2;
+             }else if(TipoM.equals("Ground")){
+             damage /=2;
+             }else if(TipoM.equals("Rock")){
+             damage *=2;
+             }else if(TipoM.equals("Ice")){
+             damage *=2;
+             }else if(TipoM.equals("Flying")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Psychic")){
+             if(TipoM.equals("Psychic")){
+             damage /=2;
+             }else if(TipoM.equals("Dark")){
+             damage *=2;
+             }else if(TipoM.equals("Fighting")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Flying")){
+            if(TipoM.equals("Ice")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage *=2;
+             }else if(TipoM.equals("Fighting")){
+             damage /=2;
+             }else if(TipoM.equals("Rock")){
+             damage *=2;
+             }else if(TipoM.equals("Ground")){
+             damage =0;
+             }else if(TipoM.equals("Grass")){
+             damage /=2;
+             }
+         }else if(TipoQ1.equals("Ground")){
+             if(TipoM.equals("Ice")){
+             damage *=2;
+             }else if(TipoM.equals("Eletric")){
+             damage =0;
+             }else if(TipoM.equals("Water")){
+             damage *=2;
+             }else if(TipoM.equals("Grass")){
+             damage *=2;
+             }
+         }else if(TipoQ1.equals("Poison")){
+             if(TipoM.equals("Ground")){
+             damage *=2;
+             }else if(TipoM.equals("Psychic")){
+             damage *=2;
+             }else if(TipoM.equals("Grass")){
+             damage /=2;
+             }else if(TipoM.equals("Poison")){
+             damage /=2;
+             }else if(TipoM.equals("Fighting")){
+             damage /=2;
+             }              
+             
+         }
+         }
+        p.HP -= (int)(damage);
+        
+        if (damage == 0){
+            System.out.println(moves[m][0] + "não teve efeito algum");
+        }else if(damage > rawDamage){
+            System.out.println(moves[m][0] + "o golpe foi super efetivo");
+        }else if(damage < rawDamage){
+            System.out.println(moves[m][0] + "o golpe não foi muito efetivo");
+        }
          System.out.println("O pokemon Aliado levou: " + damage + " de dano");
 
      }
