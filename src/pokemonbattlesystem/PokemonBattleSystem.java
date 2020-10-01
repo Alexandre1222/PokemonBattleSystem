@@ -10,52 +10,6 @@ public class PokemonBattleSystem {
         System.out.println("========================");
     }
     
-    static void Battle(){
-        /*
-        Pokemon a = new Pokemon();
-        a.setNome("Infernape(LV.50)");
-        a.setTipo1("Fighting");
-        a.setTipo2("Fire");
-       a.setHP(185);
-       a.setAt(171);
-       a.setDf(135);
-       a.setSpAt(171);
-       a.setDf(135);
-       a.setSpeed(176);
-       
-       Pokemon b = new Pokemon();
-       b.setNome("Greninja (LV.50)");
-       b.setTipo1("Water");
-       b.setTipo2("Dark");
-       b.setHP(179);
-       b.setAt(161);
-       b.setDf(130);
-       b.setSpAt(170);
-       b.setDf(135);
-       b.setSpeed(191);
-       
-       Pokemon c = new Pokemon();
-       c.setNome("Scizor (LV.50)");
-       c.setTipo1("Bug");
-       c.setTipo2("Steel");
-       c.setHP(177);
-       c.setAt(200);
-       c.setDf(167);
-       c.setSpAt(117);
-       c.setDf(145);
-       c.setSpeed(128);
-*/
-    String Pokemon1Nome = "nome aleatorio";
-    String Pokemon2Nome = "Nome aleatorio";
-    int Pokemon1Vida = 10;
-    int Pokemon2Vida = 10;
-
-    while(Pokemon1Vida > 0 && Pokemon2Vida > 0){
-    HUD(Pokemon1Vida,Pokemon2Vida,Pokemon1Nome,Pokemon2Nome);
-    }
-    
-    }
-
     public static void main(String[] args) {
     Inicio();   
     }
