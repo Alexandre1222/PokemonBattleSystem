@@ -557,7 +557,7 @@ public class Pokemon{
              }else if(TipoM.equals("Fire")){
              damage /=2;
              }else if(TipoM.equals("Water")){
-             damage /=2;
+             damage *=2;
              }else if(TipoM.equals("Grass")){
              damage *=2;
              }else if(TipoM.equals("Ice")){
